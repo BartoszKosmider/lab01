@@ -1,0 +1,16 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a7d9cdba_002D977c_002D4122_002D9a1d_002D4b1a4373ea49/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="testFips140_2 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::40693885-347B-41D5-9943-BEAEBE6DD714::net5.0::bbs.BbsTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ae161c12_002Dc07b_002D460e_002Db7c0_002D42643ca16965/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="testFips140_2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::40693885-347B-41D5-9943-BEAEBE6DD714::net5.0::bbs.BbsTests.testFips140_2&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b1788d21_002D9b7f_002D4d7d_002D9e09_002Ddb4f75fab3dd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="popopopokertest(20000)" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::40693885-347B-41D5-9943-BEAEBE6DD714::net5.0::bbs.BbsTests.popopopokertest(20000)&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
