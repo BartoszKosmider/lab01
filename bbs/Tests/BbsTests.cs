@@ -23,7 +23,7 @@ namespace bbs
         public void testFips140_2()
         {
             var count1 = inputValue.Count(c => c == '1');
-			//new stuff££
+
             Assert.IsTrue(count1 is > 9725 and < 10275);
             Assert.AreEqual(length, inputValue.Length);
         }
