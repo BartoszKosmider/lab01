@@ -26,6 +26,7 @@ namespace bbs
 
 			Assert.IsTrue(count1 is > 9725 and < 10275);
 			Assert.AreEqual(length, inputValue.Length);
+			Console.WriteLine($"1: {count1}, 0: {length - count1}" );
 		}
 
 		[Test]
@@ -107,7 +108,7 @@ namespace bbs
 			}
 
 			double result = 16.0 / 5000.0 * countConverted.Sum() - 5000;
-			//Console.WriteLine($"result: {result}");
+			Console.WriteLine($"result: {result}");
 			Assert.IsTrue(result is > 2.16 and < 46.17);
 		}
 

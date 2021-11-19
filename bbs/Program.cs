@@ -93,6 +93,7 @@ namespace bbs
 
 		private static void EncryptAndSave(string toEncrypt, string key)
 		{
+			toEncrypt = FillToMaxLength(toEncrypt);
 			File.Delete(cryptedValueFileName);
 			var result = "";
 			for (int i = 0; i < toEncrypt.Length; i++)
@@ -105,21 +106,34 @@ namespace bbs
 			File.AppendAllText(cryptedValueFileName, result);
 			//Console.WriteLine($"result {result}");
 		}
-		
+
+		private static string FillToMaxLength(string toEncrypt)
+		{
+			var baseString = "";
+			var j = 0;
+			for (int i = 0; i < N; i++)
+			{
+				j = j == toEncrypt.Length ? 0 : j;
+				Console.WriteLine($"i: {i}, j: {j}, N: {N}");
+				baseString += toEncrypt[j];
+				j++;
+			}
+			Console.WriteLine($"i: {baseString.Length}");
+			return baseString;
+		}
+
 		private static void GenerateKey()
 		{
 			File.Delete(keyFileName);
 			//BigInteger p = 30000000091;
 			//BigInteger q = 40000000003;
-			BigInteger p = 100002979;
-			BigInteger q = 100003243;
-			//BigInteger p = 100000004483;
-			//BigInteger q = 100000004987;
+			//BigInteger p = 100002979;
+			//BigInteger q = 100003243;
+			BigInteger p = 100000004483;
+			BigInteger q = 100000004987;
 			var M = p * q;
-			BigInteger N = 20000;
 			//BigInteger seed = 4882516701;
 			BigInteger seed = new Random().Next(0, Int32.MaxValue);
-			Console.WriteLine($"input values: \n p: {p}, q: {q}, M: {M}, N: {N}, seed: {seed}");
 			var count0 = 0;
 			var count1 = 0;
 
@@ -131,11 +145,15 @@ namespace bbs
 					count0++;
 				else
 					count1++;
-
+				//Console.WriteLine($"{i}");
 				File.AppendAllText(keyFileName, bit.ToString());
 			}
+			Console.WriteLine($"input values: \n p: {p}, q: {q}, M: {M}, N: {N}, seed: {seed}");
 			Console.WriteLine($"\nnumber of 0: {count0} \nnumber of 1: {count1}");
 		}
+
+		
+		private static readonly int N = 1000000;
 		private static readonly string keyFileName = "./../output.txt";
 		private static readonly string cryptedValueFileName = "./../encrypted.txt";
 		private static readonly string decryptedValueFileName = "./../decrypted.txt";
